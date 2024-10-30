@@ -1,10 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\dashboardController;
+Route::get('/',[dashboardController::class, 'index']) -> name('dashboard');
 
 Route::middleware([
     'auth:sanctum',
