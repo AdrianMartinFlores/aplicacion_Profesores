@@ -17,6 +17,9 @@ return new class extends Migration
             $table->foreignId('profesor_id')->onDelete('cascade');
             $table->foreignId('curso_id')->onDelete('cascade');
             $table->timestamps();
+            $table->string('title', 255);
+            $table->string('password', 255);
+            $table->boolean('EsProfe')->default(false);
         });
     }
 
