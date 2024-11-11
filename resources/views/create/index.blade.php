@@ -7,11 +7,16 @@
 </head>
 <body>
     <ul>
-        @forelse($creates as $create)
+        @forelse($create as $create)
             <li>{{ $create->tilte }}</li>
         @empty
             <p>No data</p>
         @endforelse
     </ul>
+    <form action="">
+        <input type="text" id="CourseName">
+        <input type="text" id="CourseDesc">
+        <input type="submit">
+    </form>
 </body>
 </html>

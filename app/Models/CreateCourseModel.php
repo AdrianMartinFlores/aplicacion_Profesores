@@ -13,4 +13,6 @@ class CreateCourseModel extends Model
         "title",
         "description"
     ];
+
+    protected $table = "creates";
 }
