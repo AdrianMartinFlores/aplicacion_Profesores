@@ -13,8 +13,9 @@
 <body>
     <ul>
         @forelse($create as $create)
-            <li>{{ $create->title }}</li>
+            <li><a href="">{{ $create->title }}</a>|<a href="">EDIT</a>|<a href="">delte</a></li>
             <li class="description">{{ $create->description }}</li>
+            <li><a href=" "></a></li>
         @empty
             <p>No data</p>
         @endforelse

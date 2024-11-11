@@ -17,4 +17,7 @@ class CreateCourse extends Controller
 
         return redirect() -> route('courses.index');
     }
+    public function edit(Edit $edit){
+        return view('courses.edit', compact('edit'));
+    }
 }
