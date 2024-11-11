@@ -8,15 +8,18 @@
 <body>
     <ul>
         @forelse($create as $create)
-            <li>{{ $create->tilte }}</li>
+            <li>{{ $create->title }}</li>
         @empty
             <p>No data</p>
         @endforelse
     </ul>
-    <form action="">
-        <input type="text" id="CourseName">
-        <input type="text" id="CourseDesc">
-        <input type="submit">
+    <form method="POST" action="{{ route('courses.creation') }}">
+        @csrf
+        <label for="CourseName">Nombre del curso</label>
+        <input type="text" name="title" id="CourseName">
+        <label for="CouseDesc">Descripcion del Curso</label>
+        <input type="text" name="description" id="CourseDesc">
+        <input type="submit" value="Crear Curso">
     </form>
 </body>
 </html>

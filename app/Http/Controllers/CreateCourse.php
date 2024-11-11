@@ -11,4 +11,10 @@ class CreateCourse extends Controller
         $create = CreateCourseModel::all();
         return view('create.index', compact('create'));
     }
+
+    public function creation(Request $request){
+        CreateCourseModel::create($request->all());
+
+        return redirect() -> route('courses.index');
+    }
 }
