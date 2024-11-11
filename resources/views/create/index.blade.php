@@ -28,4 +28,4 @@
         <input type="submit" value="Crear Curso">
     </form>
 </body>
-</html>+
+</html>
