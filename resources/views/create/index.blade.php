@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .description{
+            background-color: blue;
+        }
+    </style>
 </head>
 <body>
     <ul>
         @forelse($create as $create)
             <li>{{ $create->title }}</li>
+            <li class="description">{{ $create->description }}</li>
         @empty
             <p>No data</p>
         @endforelse
@@ -22,4 +28,4 @@
         <input type="submit" value="Crear Curso">
     </form>
 </body>
-</html>
+</html>+
